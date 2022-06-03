@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+body{
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+}
+.First-bg{
+    background: #307d99 url('../images/bg.jpg');
+    color: white;
+    text-align: center;
+    padding-bottom: 4em;
+}
+header{
+    padding-top: 1em;
+}
+
+.First-bg a{
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+section{
+    margin: 0 1em;
+}
+h1{
+    font-size: 2.5rem;
+    margin: 2em 0 1.2em;
+}
+h1 span {
+    text-transform: uppercase;
+    display: block;
+    /* display: block mean that the text will be displayed alone in its own block, here it will be seperated from the other text eating experience */
+    font-size: 1.4rem;
+    position: relative;
+    /* we choosed the position to be relative in order to show the underline below The HEALTHY, the container have to be relative in order to let the span::before which is made to make the line look behind the text THE HEALTHY not on it, Also the h1 span::before position have to be absolute and h1 span have to be relative */
+    z-index: 1;
+}
+
+h1 span::before{
+    content: ' ';
+    position: absolute;
+    width: 3em;
+    background: #00bfff;
+    height: 0.4em;
+    bottom: 0;
+    z-index: -1;
+    margin-left: -0.3em;
+    /* the last margin left to make the blue line go to the right just alittle, its like we created a background behind what is behind the span element its background is skyblue and it has its own height and width and moved it to the right with margin-left */
+}
+/* h1 span::before mean that i want to show something behind the text inside the span element, like a shadow, we do this to prevent the line from overlabbing on the text "THE HEALTHY" */
+.First-bg p{
+    font-weight: bold;
+    margin: 0 1em 3em;
+}
