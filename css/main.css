@@ -7,7 +7,7 @@ body{
     background: #307d99 url('../images/bg.jpg');
     color: white;
     text-align: center;
-    padding-bottom: 4em;
+    padding-bottom: 5em;
 }
 header{
     padding-top: 1em;
@@ -21,6 +21,7 @@ header{
 }
 section{
     margin: 0 1em;
+
 }
 h1{
     font-size: 2.5rem;
