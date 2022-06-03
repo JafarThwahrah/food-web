@@ -1,14 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+
+/*custom properties */
+
+:root {
+    --leading: 2em;
+}
+
 body{
     font-family: 'Montserrat', sans-serif;
     margin: 0;
 }
 .First-bg{
-    background: #307d99 url('../images/bg.jpg');
-    color: white;
+    background: #94328c url('../images/bg4.jpg');
+    background-position: 40% 50%;
+    /* background-position used to shift the background on x-y if we want some specific features from the background appears, here we dont need it since almost all features appears anyway */
+    color: #a8a7dd;
     text-align: center;
-    padding-bottom: 4em;
+    padding-bottom: 2em;
 }
+
 header{
     padding-top: 1em;
 }
@@ -21,7 +31,6 @@ header{
 }
 section{
     margin: 0 1em;
-
 }
 h1{
     font-size: 2.5rem;
@@ -49,7 +58,90 @@ h1 span::before{
     /* the last margin left to make the blue line go to the right just alittle, its like we created a background behind what is behind the span element its background is skyblue and it has its own height and width and moved it to the right with margin-left */
 }
 /* h1 span::before mean that i want to show something behind the text inside the span element, like a shadow, we do this to prevent the line from overlabbing on the text "THE HEALTHY" */
+/* The one which has negative z-index will be behind the one which has positive z-index */
 .First-bg p{
     font-weight: bold;
     margin: 0 1em 3em;
+}
+
+.form-container {
+    background: white;
+    margin: 2em -1em 0;
+    padding: 2em;
+}
+label{
+    color: #2d7d98;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 1em;
+    font-size: 1.2em;
+}
+input[type=text]{
+    border: 1px solid #708070;
+    width: 100%;
+    padding: 1em;
+    box-sizing: border-box;
+    /* when applying padding with width 100% that make the input text alittle bit to the right because it will add 100% width+1em to the right and left which make it extend further therefore it wont be at the same column, we use box-sizing border-box to ensure it will be on the same column with the button element */
+    border-radius: .5em;
+    margin-top: 1.2em;
+    /* we can also style the above input element using the ID city, but this will be applied on all input typed text in your code */
+}
+.form-container p {
+    color: gray;
+    margin-bottom: 1.5em;
+    font-weight: normal;
+    font-size: .9em;
+    margin-top: .3em;
+}
+
+input[type=button]{
+ background-color: #f89104;
+ border: none;
+ width: 100%;
+ color: white;
+ font-weight: bold;
+ padding: 1em 0;
+ font-size: 1.3em;
+ cursor:pointer ;
+ border-radius: .5em;
+}
+input[type=button]:hover{
+    background-color: #da7f00;
+}
+.authentic{
+    margin: 0;
+}
+img{
+    width: 100%;
+    /* to show all the image and reducing its size to make it smaller */
+}
+.right-col{
+    text-align: center;
+    margin: 3em 1em;
+}
+h2{
+    text-transform: uppercase;
+    position: relative;
+}
+h2::before{
+    content: ' ';
+    position: absolute;
+    width: 8em;
+    background: #00bfff;
+    height: 0.4em;
+    bottom: 0;
+    z-index: -1;
+    margin-left: -0.3em;
+}
+p{
+    line-height: var(--leading);
+    /* we can use 2em directly but supposedly we have more than one elements and we want to change their height , we can make custom property --leading for example and apply it on many element, so if we need to change the line-height for all element we can change from the custom property and use the --leading on many elements at the same time to make it easier to adjust, instead on going on all elements one by one */ 
+}
+@media (min-width: 730px) {
+    section {
+        margin: 0 4em;
+    }
+    .form-container {
+        margin: 2em 4em 0;
+    }
 }
