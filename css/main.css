@@ -204,7 +204,21 @@ h2{
 .Top {
     animation: fadeIn 2s forwards;
 }
+.overlay {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, .6);
+    z-index: 1;
+    place-content: center;
+    color: white;
+    display: none;
+    opacity: 0;
+}
 
+.animate-overlay {
+    animation: overlay 3s forwards;
+}
 @keyframes fadeIn {
     from{
          opacity: 0;
@@ -223,4 +237,18 @@ h2{
         margin-bottom: 1em;
     }
    
+}
+@keyfarmes overlay {
+    0%  {
+        opacity: 0;
+    }
+    30% {
+        opacity: 1;
+    }
+    70% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
 }
