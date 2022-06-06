@@ -48,14 +48,13 @@
  </section>
 
 <script>
+ let btn = document.getElementById('cta-btn');
+ let overlay = document.getElementById('overlay');
 
-let btn =document.getElementById('cta-btn');
-let overlay = document.getElementById('overlay');
-
-btn.addEventListener('click' , () => {
- overlay.style.display='grid';
- overlay.classList.add('animate-overlay')
-})
+        btn.addEventListener('click', () => {
+            overlay.style.display = 'grid';
+            overlay.classList.add('animate-overlay')
+        })
 
 </script>
 
