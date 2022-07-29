@@ -11,7 +11,7 @@ body{
     margin: 0;
 }
 .First-bg{
-    background: #94328c url('../images/bg4.jpg');
+    background: #985a93 url('./images/bg4.jpg');
     background-position: 40% 50%;
     /* background-position used to shift the background on x-y if we want some specific features from the background appears, here we dont need it since almost all features appears anyway */
     color: #a8a7dd;
